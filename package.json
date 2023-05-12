@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint --fix",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "depcheck": "depcheck ."
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css,scss,md}": [
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "airbnb": "^0.0.2",
+    "depcheck": "^1.4.3",
     "eslint": "8.40.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "13.4.2",

@@ -1,0 +1,10 @@
+{
+  "ignores": [
+    "autoprefixer",
+    "postcss",
+    "tailwindcss",
+    "airbnb",
+    "eslint-plugin-import",
+    "eslint-plugin-jsx-a11y"
+  ]
+}
