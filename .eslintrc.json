@@ -1,3 +1,50 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "airbnb",
+    "next/core-web-vitals",
+    // "eslint-plugin-react",
+    // "eslint-plugin-react-hooks",
+    // "eslint-plugin-prettier",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "import/no-duplicates": "error",
+    "import/no-unresolved": "error",
+    "import/named": "error",
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": "off",
+    "react/no-danger": "error",
+    "react/no-typos": "error",
+    "react/no-unused-state": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-concat": "error",
+    "react/jsx-props-no-spreading": "off",
+
+    // overriding recommended rules
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "no-console": ["error", { "allow": ["warn"] }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-underscore-dangle": ["error"]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["."]
+      },
+      "alias": {
+        "map": [["@/components", "./src/components"]],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  }
 }
